@@ -27,10 +27,14 @@ class Ui_frm_main_window(object):
         frm_main_window.resize(550, 667)
         font = QFont()
         font.setFamilies([u"Agency FB"])
-        font.setPointSize(11)
+        font.setPointSize(8)
         frm_main_window.setFont(font)
         self.centralwidget = QWidget(frm_main_window)
         self.centralwidget.setObjectName(u"centralwidget")
+        font1 = QFont()
+        font1.setFamilies([u"Agency FB"])
+        font1.setPointSize(12)
+        self.centralwidget.setFont(font1)
         self.verticalLayout_3 = QVBoxLayout(self.centralwidget)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.fr_upper = QFrame(self.centralwidget)
@@ -39,15 +43,12 @@ class Ui_frm_main_window(object):
         self.fr_upper.setFrameShadow(QFrame.Shadow.Raised)
         self.verticalLayout = QVBoxLayout(self.fr_upper)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.lb_placeholder = QLabel(self.fr_upper)
-        self.lb_placeholder.setObjectName(u"lb_placeholder")
-        font1 = QFont()
-        font1.setFamilies([u"Agency FB"])
-        font1.setPointSize(24)
-        self.lb_placeholder.setFont(font1)
-        self.lb_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.lb_output = QLabel(self.fr_upper)
+        self.lb_output.setObjectName(u"lb_output")
+        self.lb_output.setFont(font1)
+        self.lb_output.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.verticalLayout.addWidget(self.lb_placeholder)
+        self.verticalLayout.addWidget(self.lb_output)
 
 
         self.verticalLayout_3.addWidget(self.fr_upper)
@@ -62,6 +63,8 @@ class Ui_frm_main_window(object):
         self.lb_dragdrop = QLabel(self.fr_dragdrop)
         self.lb_dragdrop.setObjectName(u"lb_dragdrop")
         self.lb_dragdrop.setMaximumSize(QSize(250, 250))
+        self.lb_dragdrop.setFont(font1)
+        self.lb_dragdrop.setAcceptDrops(True)
         self.lb_dragdrop.setPixmap(QPixmap(u":/myicons/drag-and-drop.png"))
         self.lb_dragdrop.setScaledContents(True)
         self.lb_dragdrop.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -87,7 +90,7 @@ class Ui_frm_main_window(object):
 
     def retranslateUi(self, frm_main_window):
         frm_main_window.setWindowTitle(QCoreApplication.translate("frm_main_window", u"MainWindow", None))
-        self.lb_placeholder.setText(QCoreApplication.translate("frm_main_window", u"Platzhalter", None))
+        self.lb_output.setText(QCoreApplication.translate("frm_main_window", u"Platzhalter", None))
         self.lb_dragdrop.setText("")
     # retranslateUi
 

@@ -13,13 +13,19 @@
   <property name="font">
    <font>
     <family>Agency FB</family>
-    <pointsize>11</pointsize>
+    <pointsize>8</pointsize>
    </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <widget class="QFrame" name="fr_upper">
@@ -31,11 +37,11 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="lb_placeholder">
+        <widget class="QLabel" name="lb_output">
          <property name="font">
           <font>
            <family>Agency FB</family>
-           <pointsize>24</pointsize>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="text">
@@ -68,6 +74,15 @@
            <width>250</width>
            <height>250</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Agency FB</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="acceptDrops">
+          <bool>true</bool>
          </property>
          <property name="text">
           <string/>
