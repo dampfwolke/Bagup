@@ -15,6 +15,9 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
         self.lb_dragdrop.dragEnterEvent = self.dragEnterEvent
         self.lb_dragdrop.dropEvent = self.dropEvent
 
+    def file_dropped(self, file_path):
+        print(f"{file_path} wird verarbeitet")
+
     def dragEnterEvent(self, event: qtg.QDragEnterEvent):
         # Wir prüfen, ob die gezogenen Daten URLs enthalten (also z.B. Dateien).
         if event.mimeData().hasUrls():
@@ -31,6 +34,7 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
             file_path = url.toLocalFile()
             # Den Pfad im anderen Label ausgeben
             self.lb_output.setText(f"Datei: {file_path}")
+            self.file_dropped(file_path)
             event.acceptProposedAction()
 
 
