@@ -15,7 +15,6 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
         self.lb_dragdrop.dragEnterEvent = self.dragEnterEvent
         self.lb_dragdrop.dropEvent = self.dropEvent
 
-    # Diese Methode wird aufgerufen, wenn etwas über das Label gezogen wird.
     def dragEnterEvent(self, event: qtg.QDragEnterEvent):
         # Wir prüfen, ob die gezogenen Daten URLs enthalten (also z.B. Dateien).
         if event.mimeData().hasUrls():
@@ -23,19 +22,15 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
         else:
             event.ignore()  # Ablehnen
 
-    # Diese Methode wird aufgerufen, wenn die Maustaste über dem Label losgelassen wird.
     def dropEvent(self, event: qtg.QDropEvent):
         # Prüfen, ob URLs vorhanden sind
         if event.mimeData().hasUrls():
             # Die erste URL aus der Liste holen
             url = event.mimeData().urls()[0]
-
             # Die URL in einen lokalen Dateipfad umwandeln
             file_path = url.toLocalFile()
-
             # Den Pfad im anderen Label ausgeben
             self.lb_output.setText(f"Datei: {file_path}")
-
             event.acceptProposedAction()
 
 
