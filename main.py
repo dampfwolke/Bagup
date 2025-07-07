@@ -15,6 +15,8 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
         self.lb_dragdrop.dragEnterEvent = self.dragEnterEvent
         self.lb_dragdrop.dropEvent = self.dropEvent
 
+        self.le_input.setDisabled(True)
+
     def file_dropped(self, file_path):
         print(f"{file_path} wird verarbeitet")
 
@@ -33,7 +35,7 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
             # Die URL in einen lokalen Dateipfad umwandeln
             file_path = url.toLocalFile()
             # Den Pfad im anderen Label ausgeben
-            self.lb_output.setText(f"Datei: {file_path}")
+            self.lb_output_name.setText(f"Datei: {file_path}")
             self.file_dropped(file_path)
             event.acceptProposedAction()
 

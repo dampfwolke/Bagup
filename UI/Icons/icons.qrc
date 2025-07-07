@@ -1,7 +1,1 @@
-<RCC>
-  <qresource prefix="myicons">
-    <file>drag-and-drop.png</file>
-    <file>drag_n_drop.gif</file>
-    <file>dragndrop.png</file>
-  </qresource>
-</RCC>
+<RCC/>
