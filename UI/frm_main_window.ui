@@ -17,7 +17,11 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>BagUp</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Icons/icons.qrc">
+    <normaloff>:/images/money-bag.png</normaloff>:/images/money-bag.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="font">
@@ -108,7 +112,17 @@
              </size>
             </property>
             <property name="text">
-             <string>Explorer öffnen</string>
+             <string>  Explorer öffnen</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons/icons.qrc">
+              <normaloff>:/images/explorer.png</normaloff>:/images/explorer.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>22</width>
+              <height>22</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -121,7 +135,17 @@
              </size>
             </property>
             <property name="text">
-             <string>Sicherung erstellen</string>
+             <string>  Sicherung erstellen</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons/icons.qrc">
+              <normaloff>:/images/diskette.png</normaloff>:/images/diskette.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>22</width>
+              <height>22</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -240,7 +264,10 @@
           <number>3</number>
          </property>
          <property name="text">
-          <string>Drag and Drop</string>
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="Icons/icons.qrc">:/images/briefcase.gif</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -267,7 +294,9 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Icons/icons.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>rb_change_path</sender>

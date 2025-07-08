@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
     QLineEdit, QMainWindow, QMenuBar, QPushButton,
     QRadioButton, QSizePolicy, QSpacerItem, QStatusBar,
     QVBoxLayout, QWidget)
+import UI.Icons.icons_rc
 
 class Ui_frm_main_window(object):
     def setupUi(self, frm_main_window):
@@ -29,6 +30,9 @@ class Ui_frm_main_window(object):
         font.setFamilies([u"Agency FB"])
         font.setPointSize(8)
         frm_main_window.setFont(font)
+        icon = QIcon()
+        icon.addFile(u":/images/money-bag.png", QSize(), QIcon.Normal, QIcon.Off)
+        frm_main_window.setWindowIcon(icon)
         self.centralwidget = QWidget(frm_main_window)
         self.centralwidget.setObjectName(u"centralwidget")
         font1 = QFont()
@@ -87,12 +91,20 @@ class Ui_frm_main_window(object):
         self.pb_explorer = QPushButton(self.wg_input_buttons)
         self.pb_explorer.setObjectName(u"pb_explorer")
         self.pb_explorer.setMinimumSize(QSize(110, 0))
+        icon1 = QIcon()
+        icon1.addFile(u":/images/explorer.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pb_explorer.setIcon(icon1)
+        self.pb_explorer.setIconSize(QSize(22, 22))
 
         self.horizontalLayout_3.addWidget(self.pb_explorer)
 
         self.pb_create_backup = QPushButton(self.wg_input_buttons)
         self.pb_create_backup.setObjectName(u"pb_create_backup")
         self.pb_create_backup.setMinimumSize(QSize(110, 0))
+        icon2 = QIcon()
+        icon2.addFile(u":/images/diskette.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pb_create_backup.setIcon(icon2)
+        self.pb_create_backup.setIconSize(QSize(22, 22))
 
         self.horizontalLayout_3.addWidget(self.pb_create_backup)
 
@@ -150,6 +162,7 @@ class Ui_frm_main_window(object):
         self.lb_dragdrop.setAcceptDrops(True)
         self.lb_dragdrop.setFrameShape(QFrame.Shape.Box)
         self.lb_dragdrop.setLineWidth(3)
+        self.lb_dragdrop.setPixmap(QPixmap(u":/images/briefcase.gif"))
         self.lb_dragdrop.setScaledContents(True)
         self.lb_dragdrop.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -174,14 +187,14 @@ class Ui_frm_main_window(object):
     # setupUi
 
     def retranslateUi(self, frm_main_window):
-        frm_main_window.setWindowTitle(QCoreApplication.translate("frm_main_window", u"MainWindow", None))
+        frm_main_window.setWindowTitle(QCoreApplication.translate("frm_main_window", u"BagUp", None))
         self.lb_input.setText(QCoreApplication.translate("frm_main_window", u"Dateipfad: ", None))
         self.rb_change_path.setText(QCoreApplication.translate("frm_main_window", u"Pfad editieren", None))
-        self.pb_explorer.setText(QCoreApplication.translate("frm_main_window", u"Explorer \u00f6ffnen", None))
-        self.pb_create_backup.setText(QCoreApplication.translate("frm_main_window", u"Sicherung erstellen", None))
+        self.pb_explorer.setText(QCoreApplication.translate("frm_main_window", u"  Explorer \u00f6ffnen", None))
+        self.pb_create_backup.setText(QCoreApplication.translate("frm_main_window", u"  Sicherung erstellen", None))
         self.lb_output_upper.setText(QCoreApplication.translate("frm_main_window", u"Sicherung von", None))
         self.lb_output_name.setText(QCoreApplication.translate("frm_main_window", u"Dateiname", None))
         self.lb_output_success.setText(QCoreApplication.translate("frm_main_window", u"wurde erfolgreich erstellt.", None))
-        self.lb_dragdrop.setText(QCoreApplication.translate("frm_main_window", u"Drag and Drop", None))
+        self.lb_dragdrop.setText("")
     # retranslateUi
 

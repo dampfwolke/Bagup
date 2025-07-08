@@ -48,7 +48,7 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
             # Die URL in einen lokalen Dateipfad umwandeln
             file_path = url.toLocalFile()
             # Den Pfad im anderen Label ausgeben
-            self.lb_output_name.setText(f"Datei: {file_path}")
+            # self.lb_output_name.setText(f"Datei: {file_path}")
             self.file_dropped(file_path)
             event.acceptProposedAction()
 
