@@ -30,7 +30,7 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
 
         # NEU: Benutze einen QTimer, um die Animation nach 4 Sekunden zu stoppen.
         #      Wir rufen eine eigene Methode auf, um auch zum ersten Frame zurückzuspringen.
-        qtc.QTimer.singleShot(4000, self.stop_initial_animation)
+        qtc.QTimer.singleShot(1800, self.stop_initial_animation)
 
         # Dein restlicher Initialisierungs-Code
         self.le_input.setDisabled(True)
