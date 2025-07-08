@@ -25,7 +25,7 @@ def timestamp(time_type: int) -> str:
 
     if time_type == 4:
         current_time = datetime.now()
-        current_timestamp = current_time.strftime("%Y-%m-%d %H:%M")
+        current_timestamp = current_time.strftime("%Y-%m-%d_%H_%M")
         return str(current_timestamp)
 
     return "Keine passender 'time_type(1, 2, 3 oder 4)' ausgewählt"
