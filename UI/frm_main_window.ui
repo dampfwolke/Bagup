@@ -230,6 +230,12 @@
     </item>
     <item>
      <widget class="QFrame" name="fr_dragdrop">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>300</height>
+       </size>
+      </property>
       <property name="layoutDirection">
        <enum>Qt::LayoutDirection::LeftToRight</enum>
       </property>
@@ -267,7 +273,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="Icons/icons.qrc">:/images/briefcase.gif</pixmap>
+          <pixmap resource="Icons/icons.qrc">:/images/gift-bag.gif</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>

@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="images">
+    <file>gift-bag.gif</file>
     <file>diskette.png</file>
     <file>briefcase.gif</file>
     <file>explorer.png</file>

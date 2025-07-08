@@ -150,6 +150,7 @@ class Ui_frm_main_window(object):
 
         self.fr_dragdrop = QFrame(self.centralwidget)
         self.fr_dragdrop.setObjectName(u"fr_dragdrop")
+        self.fr_dragdrop.setMinimumSize(QSize(0, 300))
         self.fr_dragdrop.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         self.fr_dragdrop.setFrameShape(QFrame.Shape.StyledPanel)
         self.fr_dragdrop.setFrameShadow(QFrame.Shadow.Raised)
@@ -162,7 +163,7 @@ class Ui_frm_main_window(object):
         self.lb_dragdrop.setAcceptDrops(True)
         self.lb_dragdrop.setFrameShape(QFrame.Shape.Box)
         self.lb_dragdrop.setLineWidth(3)
-        self.lb_dragdrop.setPixmap(QPixmap(u":/images/briefcase.gif"))
+        self.lb_dragdrop.setPixmap(QPixmap(u":/images/gift-bag.gif"))
         self.lb_dragdrop.setScaledContents(True)
         self.lb_dragdrop.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
